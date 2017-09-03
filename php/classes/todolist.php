@@ -1,5 +1,9 @@
 <?php
 
+namespace Edu\Cnm\todolist;
+
+require_once("autoload.php");
+
 /**
  * Todo Class
  *
