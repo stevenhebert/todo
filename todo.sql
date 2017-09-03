@@ -4,6 +4,6 @@ CREATE TABLE todo (
 	id 	INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	title VARCHAR(32)                 NOT NULL,
 	description VARCHAR(128)          NOT NULL,
+	dateTime   TIMESTAMP(6)           NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
 	PRIMARY KEY (id)
 );
-
