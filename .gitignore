@@ -1,0 +1,10 @@
+.DS_Store
+/.idea
+/node_modules
+/typings
+/app/**/*.js
+/app/**/*.js.map
+/vendor
+/public_html/dist
+/public_html/index.php
+/npm-debug.log
