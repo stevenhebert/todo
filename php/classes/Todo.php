@@ -1,13 +1,13 @@
 <?php
 
-namespace Edu\Cnm\todolist;
+namespace Edu\Cnm\Todo;
 
 require_once("autoload.php");
 
 /**
  * Todo Class
  *
- * This class stores the todo list entry items
+ * This class stores the todo list tasks
  * It creates the todo table
  * It inserts the todo object
  * It updates the todo object
@@ -19,11 +19,11 @@ require_once("autoload.php");
  **/
 
 
-class todo {
-
+class Todo implements \JsonSerializable {
+use ValidateDate;
 
 	/**
-	 * id for todo item
+	 * id for a task
 	 * this is the primary key
 	 * @var int $id
 	 *
@@ -31,14 +31,14 @@ class todo {
 	private $id;
 
 	/**
-	 * title for this todo item
+	 * title for this task
 	 * @var string $title
 	 *
 	 */
 	private $title;
 
 	/**
-	 * description for todo item
+	 * description this task
 	 * @var string $description
 	 *
 	 */
@@ -53,7 +53,7 @@ class todo {
 
 
 	/**
-	 * constructor for todo class
+	 * constructor for Todo class
 	 *
 	 * @param int $newId
 	 * @param string $newTitle
